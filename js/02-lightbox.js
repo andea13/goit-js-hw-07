@@ -4,8 +4,6 @@ import { galleryItems } from "./gallery-items.js";
 console.log(galleryItems);
 
 const galleryWrapperRef = document.querySelector(".gallery");
-const galleryLinkRef = document.querySelector(".gallery__link");
-console.log(galleryLinkRef);
 const galleryMarkup = createGalleryMarkup(galleryItems);
 
 galleryWrapperRef.insertAdjacentHTML("beforeend", galleryMarkup);
@@ -27,4 +25,9 @@ function createGalleryMarkup(galleryItems) {
     .join("");
 }
 
-let lightbox = new SimpleLightbox(".gallery a", {});
+let newModal = new SimpleLightbox(".gallery a", {
+  captions: true,
+  captionsData: "alt",
+  captionPosition: "bottom",
+  captionDelay: 250,
+});

@@ -4,11 +4,7 @@ console.log(galleryItems);
 
 //1.Рендеринг
 
-// let hrefsArray = galleryItems.map((item) => item.original);
-
 const galleryWrapperRef = document.querySelector(".gallery");
-const galleryLinkRef = document.querySelector(".gallery__link");
-console.log(galleryLinkRef);
 const galleryMarkup = createGalleryMarkup(galleryItems);
 
 galleryWrapperRef.insertAdjacentHTML("beforeend", galleryMarkup);
@@ -54,6 +50,7 @@ allGalleryItems.forEach((item) => {
     });
   });
 });
+
 //перевірка підключення basicLightbox
 
 // const instance = basicLightbox.create(`
@@ -66,5 +63,3 @@ allGalleryItems.forEach((item) => {
 // `);
 
 // instance.show();
-
-//створюємо модальне вікно lightbox
